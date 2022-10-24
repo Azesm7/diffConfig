@@ -114,13 +114,13 @@ func main() {
 	var file1 string
 	var file2 string
 	var formatString string
-	app := cli.NewApp()
+	app := cli.NewApp() // инцелизируем флаг
 
-	app.Flags = []cli.Flag{
+	app.Flags = []cli.Flag{ // создание флага
 		cli.StringFlag{
-			Name:        "File1",
-			Usage:       "Address File1",
-			Destination: &file1,
+			Name:        "File1",         // имя флага
+			Usage:       "Address File1", // вывод в help
+			Destination: &file1,          // запись аргумента в переменную
 		},
 		cli.StringFlag{
 			Name:        "File2",
